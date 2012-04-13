@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Checkbox-field</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -39,11 +39,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Checkbox-field</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="#example">Example</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -55,9 +55,9 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <h1>Checkbox-field</h1>
+        <p>A javascript thing that turns ugly multiselects into shiny checkbox fields, using Backbone, Handlebars and jQuery.</p>
+        <p><a class="btn btn-primary btn-large">View on Github &raquo;</a></p>
       </div>
 
       <div id="checkbox-template" style="display:none">
@@ -67,41 +67,48 @@
         </div>
       </div>
 
-      <p id="checkboxes">
-      </p>
-      <p id="select_all">
-        <span id="all-template" style="display:none"><a href="#">{{label}}</a></span>
-      </p>
-
-      <select id="id_employees" multiple="1">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-      </select>
-
 
       <!-- Example row of columns -->
       <div class="row">
+        <a name="example"></a>
         <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Vanilla multiselect</h2>
+          <select id="id_employees" multiple="1">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+          </select>
+          <p>A multiselect field is the most confusing HTML widget ever envisioned. Everybody gets confused by them.</p>
         </div>
         <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Many checkboxes</h2>
+          <p id="checkboxes">
+          </p>
+          <p id="select_all">
+            <span id="all-template" style="display:none"><a href="#">{{label}}</a></span>
+          </p>
+           <p>A bunch of checkboxes look better, but they are difficult for the backend developer to handle.</p>
        </div>
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Checkbox-field</h2>
+          <p>The two combined give us the best of both worlds. Users see a field of checkboxes and they are submitted as a single form field. </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <a name="contact"></a>
+
+        <div class="span4">
+          <h2>Contact me</h2>
+          <p></p>
         </div>
       </div>
 
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>Swizec created this in Ljubljana with love, 2012</p>
       </footer>
 
     </div> <!-- /container -->
@@ -115,5 +122,6 @@
     <script src="js/underscore-min.js"></script>
     <script src="js/backbone-min.js"></script>
     <script src="js/checkbox-field.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
