@@ -18,8 +18,8 @@ Installation
 
         <div id="checkbox-template" style="display:none">
           <div style="display:inline-block">
-            <input type="checkbox" id="checkbox_{{value}}" />
-            <label for="checkbox_{{value}}">{{label}}</label>
+            <input type="checkbox" id="checkbox_{{id}}" />
+            <label for="checkbox_{{id}}">{{label}}</label>
           </div>
         </div>
 

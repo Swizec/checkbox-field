@@ -18,6 +18,8 @@
             var Checkbox = Backbone.Model.extend({
                 initialize: function () {
                     this.bind("change:selected", this.toggled);
+
+                    this.attributes.id = this.cid;
                 },
 
                 toggled: function () {
