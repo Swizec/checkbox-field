@@ -1,4 +1,3 @@
-
 Checkbox-field
 =======================
 
@@ -15,16 +14,12 @@ Installation
 * Add Handlebars -> http://handlebarsjs.com/
 * Add a template for checkboxes
 
-    &lt;div id="checkbox-template"
-         style="display:none"&gt;
-      &lt;div style="display:inline-block"&gt;
-        &lt;input type="checkbox"
-               id="checkbox_{{value}}" /&gt;
-        &lt;label for="checkbox_{{value}}"&gt;
-           {{label}}
-        &lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+        <div id="checkbox-template" style="display:none">
+          <div style="display:inline-block">
+            <input type="checkbox" id="checkbox_{{value}}" />
+            <label for="checkbox_{{value}}">{{label}}</label>
+          </div>
+        </div>
 
 * You're done!
 
