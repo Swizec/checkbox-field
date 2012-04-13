@@ -6,6 +6,8 @@ into something users can understand and you can work with.
 
 It depends on Backbone, Handlebars and jQuery.
 
+You can see it in action over here: http://swizec.github.com/checkbox-field/
+
 Installation
 ----------------------
 
