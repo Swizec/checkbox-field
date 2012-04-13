@@ -57,8 +57,7 @@
       <div class="hero-unit">
         <h1>Checkbox-field</h1>
         <p>A simple javascript thing that turns ugly multiselects into shiny checkbox fields, using Backbone, Handlebars and jQuery.</p>
-        <p><a class="btn btn-primary btn-large">View on Github &raquo;</a></p>
-        <p>&nbsp;</p>
+        <p><a class="btn btn-primary btn-large" href="https://github.com/Swizec/checkbox-field">View on Github &raquo;</a></p>
         <p>
           <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=Swizec&repo=checkbox-field&type=fork&count=true"
                   allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
@@ -70,8 +69,8 @@
 
       <div id="checkbox-template" style="display:none">
         <div style="display:inline-block">
-          <input type="checkbox" id="id_{{value}}" />
-          <label for="id_{{value}}">{{label}}</label>
+          <input type="checkbox" id="checkbox_{{value}}" />
+          <label for="checkbox_{{value}}">{{label}}</label>
         </div>
       </div>
 
@@ -81,7 +80,7 @@
         <a name="example"></a>
         <div class="span4">
           <h2>Vanilla multiselect</h2>
-          <select id="id_employees" multiple="1">
+          <select id="vanilla" multiple="1">
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
