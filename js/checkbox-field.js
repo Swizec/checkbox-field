@@ -84,7 +84,7 @@
 
             var SelectAllView = Backbone.View.extend({
                 tagName: "a",
-                template: Handlebars.compile($("#all-template").html()),
+                template: Handlebars.compile('<a href="#">{{label}}</a>'),
                 selected: false,
 
                 events: {
