@@ -14,16 +14,18 @@ Installation
 * Add [Backbone] [1]
 * Add [Handlebars] [2]
 * Add a template for checkboxes
+
       <div id="checkbox-template" style="display:none">
         <div style="display:inline-block">
           <input type="checkbox" id="checkbox_{{value}}" />
           <label for="checkbox_{{value}}">{{label}}</label>
         </div>
       </div>
+
 * You're done!
 
-[1] http://backbonejs.org/
-[2] http://handlebarsjs.com/
+[1] http://backbonejs.org/   "Backbone"
+[2] http://handlebarsjs.com/ "Handlebars"
 
 Usage
 -----------------------
