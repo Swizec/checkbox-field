@@ -2,7 +2,13 @@
 (function ($) {
 
     $("#vanilla").checkboxField({
-        checkboxes: $("#checkboxes")
+        checkboxes: $("#checkboxes"),
+        hide: false,
+        select_all: false
+    });
+
+    $("#example").checkboxField({
+
     });
 
 })(jQuery);

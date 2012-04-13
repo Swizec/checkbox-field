@@ -5,7 +5,8 @@
         var settings = $.extend({
             template: $("#checkbox-template"),
             select_all: true,
-            checkboxes: null
+            checkboxes: null,
+            hide: true
         }, options);
 
         return this.each(function () {
@@ -20,7 +21,7 @@
                 },
 
                 toggled: function () {
-                    var $opt = $("#id_employees option[value="+this.get('value')+"]");
+                    var $opt = $multiselect.find("option[value="+this.get('value')+"]");
 
                     if (this.get('selected')) {
                         $opt.attr("selected", "1");
@@ -65,7 +66,8 @@
                     if (settings.checkboxes) {
                         this.el = settings.checkboxes;
                     }else{
-
+                        this.el = $("<p></p>");
+                        $multiselect.after(this.el);
                     }
 
                     var _this = this;
@@ -91,6 +93,11 @@
 
                 initialize: function (checkboxes) {
                     this.checkboxes = checkboxes;
+                },
+
+                place: function ($after) {
+                    this.container = $("<p></p>").append(this.render().el);
+                    $after.after(this.container);
                 },
 
                 render: function () {
@@ -122,9 +129,15 @@
 
             var checkboxes = new Checkboxes();
             var checkboxes_view = new CheckboxesView(checkboxes);
-            var select_all = new SelectAllView(checkboxes);
 
-            $("#select_all").append(select_all.render().el);
+            if (settings.select_all) {
+                var select_all = new SelectAllView(checkboxes);
+                select_all.place(checkboxes_view.el);
+            }
+
+            if (settings.hide) {
+                $multiselect.css("display", "none");
+            }
 
             $multiselect.find("option").each(function (i, el) {
                 var $el = $(el);
