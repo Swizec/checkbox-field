@@ -60,6 +60,25 @@
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
 
+      <div id="checkbox-template" style="display:none">
+        <div style="display:inline-block">
+          <input type="checkbox" id="id_{{value}}" />
+          <label for="id_{{value}}">{{label}}</label>
+        </div>
+      </div>
+
+      <p id="checkboxes">
+      </p>
+      <p id="select_all">
+        <span id="all-template" style="display:none"><a href="#">{{label}}</a></span>
+      </p>
+
+      <select id="id_employees" multiple="1">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </select>
+
+
       <!-- Example row of columns -->
       <div class="row">
         <div class="span4">
@@ -92,5 +111,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/backbone-min.js"></script>
+    <script src="js/checkbox-field.js"></script>
   </body>
 </html>
