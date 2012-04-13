@@ -4,9 +4,9 @@
     prettyPrint();
 
     $("#vanilla").checkboxField({
-        checkboxes: $("#checkboxes"),
+        checkboxes: "#checkboxes",
         hide: false,
-        select_all: false
+        show_select_all: false
     });
 
     $("#example").checkboxField({

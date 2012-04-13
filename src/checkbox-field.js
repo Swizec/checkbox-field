@@ -3,17 +3,19 @@
     $.fn.checkboxField = function (options) {
 
         var settings = $.extend({
-            template: $("#checkbox-template"),
-            select_all: true,
+            template: "#checkbox-template",
             checkboxes: null,
-            hide: true
+            hide: true,
+            show_select_all: true,
+            select_all: "Select all",
+            deselect_all: "Deselect all"
         }, options);
 
         return this.each(function () {
 
             var $multiselect = $(this);
 
-            var template = Handlebars.compile(settings.template.html());
+            var template = Handlebars.compile($(settings.template).html());
 
             var Checkbox = Backbone.Model.extend({
                 initialize: function () {
@@ -66,7 +68,7 @@
             var CheckboxesView = Backbone.Collection.extend({
                 initialize: function (checkboxes) {
                     if (settings.checkboxes) {
-                        this.el = settings.checkboxes;
+                        this.el = $(settings.checkboxes);
                     }else{
                         this.el = $("<p></p>");
                         $multiselect.after(this.el);
@@ -104,7 +106,7 @@
 
                 render: function () {
                     $(this.el).html(this.template({label: (!this.selected) ?
-                                                   "Select all" : "Deselect all"}));
+                                                   settings.select_all : settings.deselect_all}));
                     return this;
                 },
 
@@ -132,7 +134,7 @@
             var checkboxes = new Checkboxes();
             var checkboxes_view = new CheckboxesView(checkboxes);
 
-            if (settings.select_all) {
+            if (settings.show_select_all) {
                 var select_all = new SelectAllView(checkboxes);
                 select_all.place(checkboxes_view.el);
             }

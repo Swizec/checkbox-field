@@ -122,16 +122,20 @@ $("#my_selector").checkboxField();
 // there are also some options
 $("#my_selector").checkboxField({
     // a handlebars template for the checkboxes (default: #checkbox-template)
-    template: $("#checkbox-template"),
-
-    // display "select all" (default: true)
-    select_all: true
+    template: "#checkbox-template",
 
     // placeholder for checkboxes (default: one is created)
     checkboxes: null,
 
     // hide the original multiselect or not (default: yup)
     hide: true
+
+    // display "select all" (default: true)
+    show_select_all: true
+
+    // labels for select_all control
+    select_all: "Select all",
+    deselect_all: "Deselect all"
 });
           </pre>
         </div>
