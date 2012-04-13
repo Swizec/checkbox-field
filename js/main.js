@@ -1,6 +1,8 @@
 
 (function ($) {
 
+    prettyPrint();
+
     $("#vanilla").checkboxField({
         checkboxes: $("#checkboxes"),
         hide: false,
