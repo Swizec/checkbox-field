@@ -47,3 +47,8 @@ Usage
         select_all: "Select all",
         deselect_all: "Deselect all"
     });
+
+License
+-----------------------
+
+MIT
